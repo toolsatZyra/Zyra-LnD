@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reel from "@/components/Reel";
 import CtaBox from "@/components/CtaBox";
+import Amp, { withAmp } from "@/components/Amp";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -54,7 +55,7 @@ export default function About() {
             <h1 className="dsp d1">
               A production studio,
               <br />
-              <span className="grad">pointed at L&amp;D.</span>
+              <span className="grad">pointed at L<Amp />D.</span>
             </h1>
           </div>
           <Reel seed={50} label="Studio reel — now playing" corner="Gurgaon · Est. 2023" showShot={false} />
@@ -96,7 +97,7 @@ export default function About() {
               <div key={yr} style={{ display: "grid", gridTemplateColumns: "78px 1fr", gap: 18, padding: "16px 0", borderTop: "1px solid var(--line)" }}>
                 <p className="m m-a" style={{ fontSize: 12 }}>{yr}</p>
                 <div className="stack g6">
-                  <h3 className="dsp d4">{title}</h3>
+                  <h3 className="dsp d4">{withAmp(title)}</h3>
                   <p className="bxs">{body}</p>
                 </div>
               </div>

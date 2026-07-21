@@ -70,6 +70,25 @@ button { font: inherit; }
 .d3 { font-size: clamp(18px, 1.9vw, 26px); }
 .d4 { font-size: clamp(15px, 1.35vw, 18.5px); }
 
+/* One ampersand shape across the whole site. Archivo, Bricolage and JetBrains
+   Mono each draw "&" differently — this pins every one to the body face.
+   Optically sized so it still sits inside heavy condensed display type. */
+.amp {
+  font-family: var(--font-body), sans-serif;
+  font-stretch: 100%;
+  font-weight: 600;
+  font-size: 0.92em;
+  letter-spacing: 0;
+  padding-inline: 0.02em;
+}
+/* Inside display type it sits beside 800-weight condensed letters, so it
+   needs the body face's heaviest cut to avoid reading as a light spot. */
+.dsp .amp {
+  font-weight: 700;
+  font-size: 0.86em;
+  padding-inline: 0.04em;
+}
+
 .grad {
   background: linear-gradient(100deg, var(--acc), var(--acc2));
   -webkit-background-clip: text;

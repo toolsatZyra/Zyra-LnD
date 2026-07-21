@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Frame from "./Frame";
+import Amp from "./Amp";
 
 const SHOTS = [
   "Onboarding · Logistics client",
@@ -20,14 +21,19 @@ const timecode = (sec: number) =>
 export default function Reel({
   seed = 1,
   label = "Showreel — now playing",
-  corner = "Zyra L&D · 2026",
+  corner,
   showShot = true,
 }: {
   seed?: number;
   label?: string;
-  corner?: string;
+  corner?: React.ReactNode;
   showShot?: boolean;
 }) {
+  const cornerContent = corner ?? (
+    <>
+      Zyra L<Amp />D · 2026
+    </>
+  );
   const [shot, setShot] = useState(0);
   const tcRef = useRef<HTMLSpanElement>(null);
 
@@ -54,7 +60,7 @@ export default function Reel({
       {showShot && (
         <span className="tag bl_">{SHOTS[shot % SHOTS.length]}</span>
       )}
-      <span className="tag br_">{corner}</span>
+      <span className="tag br_">{cornerContent}</span>
     </div>
   );
 }

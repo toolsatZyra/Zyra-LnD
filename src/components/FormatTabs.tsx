@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Frame from "./Frame";
+import { withAmp } from "./Amp";
 
 const FORMATS = [
   {
@@ -70,7 +71,7 @@ export default function FormatTabs() {
 
       <div className="tab-body" role="tabpanel" id={`pane-${cur.id}`}>
         <div className="stack g14">
-          <h3 className="dsp d3">{cur.title}</h3>
+          <h3 className="dsp d3">{withAmp(cur.title)}</h3>
           <p className="bs">{cur.body}</p>
           <p className="m">{cur.best}</p>
           <Link href="/services" className="tl">

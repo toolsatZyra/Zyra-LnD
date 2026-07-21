@@ -41,8 +41,13 @@ export default function Frame({
   onShotChange,
 }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
+  /* Held in a ref so a changing callback identity doesn't restart the
+     animation loop. Assigned in an effect — refs must not be written
+     during render. */
   const shotCb = useRef(onShotChange);
-  shotCb.current = onShotChange;
+  useEffect(() => {
+    shotCb.current = onShotChange;
+  }, [onShotChange]);
 
   useEffect(() => {
     const cv = ref.current;

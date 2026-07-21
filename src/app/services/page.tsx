@@ -3,6 +3,7 @@ import Link from "next/link";
 import Reel from "@/components/Reel";
 import Frame from "@/components/Frame";
 import CtaBox from "@/components/CtaBox";
+import Amp, { withAmp } from "@/components/Amp";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -104,7 +105,7 @@ export default function Services() {
             <h1 className="dsp d1">
               What we make
               <br />
-              <span className="grad">for L&amp;D teams.</span>
+              <span className="grad">for L<Amp />D teams.</span>
             </h1>
           </div>
           <Reel seed={30} label="Selected work — now playing" showShot={false} />
@@ -128,7 +129,7 @@ export default function Services() {
             <div className="svc rv" key={s.n}>
               <p className="ni">{s.n}</p>
               <div className="stack g10">
-                <h2 className="dsp d3">{s.title}</h2>
+                <h2 className="dsp d3">{withAmp(s.title)}</h2>
                 <p className="bs" style={{ maxWidth: "58ch" }}>{s.body}</p>
                 <div className="svc-m">
                   <div>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -14,9 +14,10 @@ const LINKS = [
 
 export default function Nav() {
   const pathname = usePathname();
+  /* Closed on link click rather than on a pathname effect — reacting to the
+     route would cascade a render, and wouldn't fire when the tapped link is
+     the current page. */
   const [open, setOpen] = useState(false);
-
-  useEffect(() => setOpen(false), [pathname]);
 
   return (
     <nav className="nav">
@@ -64,7 +65,7 @@ export default function Nav() {
 
       <div id="mobile-menu" className={`drawer${open ? " open" : ""}`}>
         {LINKS.map((l) => (
-          <Link key={l.href} href={l.href}>
+          <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
             {l.label}
           </Link>
         ))}

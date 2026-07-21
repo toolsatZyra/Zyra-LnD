@@ -5,6 +5,7 @@ import Marquee from "@/components/Marquee";
 import FormatTabs from "@/components/FormatTabs";
 import StoryCarousel from "@/components/StoryCarousel";
 import CtaBox from "@/components/CtaBox";
+import Amp, { withAmp } from "@/components/Amp";
 
 const WHY: [string, string, string][] = [
   ["01", "Broadcast-grade craft", "Scripted, scored, graded and finished to delivery spec — cinematography and sound design, not slides with a voiceover laid over them."],
@@ -219,7 +220,7 @@ export default function Home() {
                   <span className="tag br_ num">{tc}</span>
                 </div>
                 <div className="ub">
-                  <h3 className="dsp d4">{title}</h3>
+                  <h3 className="dsp d4">{withAmp(title)}</h3>
                   <p className="bxs">{body}</p>
                   <Link href="/services" className="tl">Explore →</Link>
                 </div>
@@ -233,9 +234,11 @@ export default function Home() {
         <div className="wrap stack g34">
           <div className="head ctr rv">
             <span className="eye" style={{ borderColor: "color-mix(in srgb, var(--acc) 32%, transparent)", color: "var(--acc)" }}>
-              Trusted by teams at Adani, NDTV &amp; Swiggy
+              Trusted by teams at Adani, NDTV <Amp /> Swiggy
             </span>
-            <h2 className="dsp d2">Why L&amp;D teams<br />choose Zyra.</h2>
+            <h2 className="dsp d2">
+              Why L<Amp />D teams<br />choose Zyra.
+            </h2>
           </div>
           <StoryCarousel />
           <p className="m rv ctr">
@@ -262,7 +265,7 @@ export default function Home() {
               ))}
             </div>
             <div className="ba-col good">
-              <div className="ba-h"><p className="m m-a">With Zyra L&amp;D</p></div>
+              <div className="ba-h"><p className="m m-a">With Zyra L<Amp />D</p></div>
               {AFTER.map((a) => (
                 <div className="ba-r" key={a}>
                   <span className="ic ic-c">✓</span>
@@ -285,7 +288,7 @@ export default function Home() {
               <thead>
                 <tr>
                   <th>&nbsp;</th>
-                  <th>Zyra L&amp;D</th>
+                  <th>Zyra L<Amp />D</th>
                   <th>Production agency</th>
                   <th>Off-the-shelf library</th>
                   <th>In-house / freelance</th>
@@ -294,7 +297,7 @@ export default function Home() {
               <tbody>
                 {COMPARE.map(([label, ...cells]) => (
                   <tr key={label}>
-                    <td className="m">{label}</td>
+                    <td className="m">{withAmp(label)}</td>
                     {cells.map((c, i) => (
                       <td key={i} className={i === 0 ? "own" : undefined}>{c}</td>
                     ))}
