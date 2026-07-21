@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -20,8 +21,19 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav-in">
-        <Link href="/" className="logo">
-          ZYRA <b>L&amp;D</b>
+        <Link href="/" className="logo" aria-label="Zyra L&D — home">
+          <span className="logo-chip">
+            <Image
+              src="/zyra-logo.png"
+              alt="Zyra"
+              width={1520}
+              height={760}
+              priority
+              className="logo-mark"
+            />
+          </span>
+          <span className="logo-div" aria-hidden="true" />
+          <span className="logo-sub">L&amp;D</span>
         </Link>
 
         <div className="nl">

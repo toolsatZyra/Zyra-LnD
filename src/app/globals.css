@@ -201,8 +201,22 @@ p { margin: 0; }
   max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(18px, 4vw, 52px);
   height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 14px;
 }
-.logo { font-size: 14px; font-weight: 800; letter-spacing: .02em; white-space: nowrap; }
-.logo b { color: var(--acc); }
+/* Logo lockup — Zyra wordmark + L&D sub-brand, divided by a hairline.
+   The brand asset is a white wordmark with a teal accent, built for the dark
+   main site. It sits on a dark chip here rather than being inverted — invert
+   would flip the teal accent to maroon and break the brand colour. */
+.logo { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
+.logo-chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg3); border-radius: 8px; padding: 7px 11px;
+}
+.logo-mark { height: 18px; width: auto; display: block; }
+.logo-div { width: 1px; height: 18px; background: var(--line2); flex-shrink: 0; }
+.logo-sub {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800; font-stretch: 84%; font-size: 15px;
+  letter-spacing: .04em; color: var(--acc);
+}
 .nl { display: flex; gap: 26px; }
 .nl a { font-size: 13px; color: var(--fg2); padding: 4px 0; position: relative; transition: color .2s; }
 .nl a:hover, .nl a.on { color: var(--fg); }

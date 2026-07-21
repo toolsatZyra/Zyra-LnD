@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -7,7 +8,17 @@ export default function Footer() {
         <div className="foot-g">
           <div className="stack g10">
             <span className="logo">
-              ZYRA <b>L&amp;D</b>
+              <span className="logo-chip">
+                <Image
+                  src="/zyra-logo.png"
+                  alt="Zyra"
+                  width={1520}
+                  height={760}
+                  className="logo-mark"
+                />
+              </span>
+              <span className="logo-div" aria-hidden="true" />
+              <span className="logo-sub">L&amp;D</span>
             </span>
             <p className="bxs" style={{ maxWidth: "34ch" }}>
               Corporate training video, produced AI-native and delivered
