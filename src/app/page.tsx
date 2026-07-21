@@ -118,18 +118,13 @@ export default function Home() {
         <div className="glow" style={{ width: 420, height: 420, background: "var(--acc)", right: -90, top: -140, opacity: 0.16 }} />
         <div className="glow" style={{ width: 330, height: 330, background: "var(--acc2)", left: -110, bottom: -150, opacity: 0.13 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
-          <div className="stack g18" style={{ maxWidth: "62ch" }}>
+          <div className="hero-copy stack g18">
             <span className="eye" style={{ alignSelf: "flex-start" }}>
               AI-native production studio · Gurgaon
             </span>
-            <h1 className="dsp d1">
-              Corporate training,
-              <br />
-              <span className="grad">made like cinema.</span>
+            <h1 className="dsp d1 oneline">
+              Corporate training, <span className="grad">made like cinema.</span>
             </h1>
-          </div>
-          <Reel seed={1} />
-          <div className="stack g18" style={{ maxWidth: "62ch" }}>
             <p className="lede">
               We produce broadcast-grade training video across the entire learning
               lifecycle — onboarding, compliance, safety and product enablement. Built
@@ -142,6 +137,7 @@ export default function Home() {
               <Link href="/services" className="btn btn-g">Explore services</Link>
             </div>
           </div>
+          <Reel seed={1} />
         </div>
       </section>
 

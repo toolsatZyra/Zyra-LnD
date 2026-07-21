@@ -101,16 +101,11 @@ export default function Services() {
       <section className="hero">
         <div className="glow" style={{ width: 400, height: 400, background: "var(--acc)", right: -100, top: -150, opacity: 0.15 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
-          <div className="stack g18" style={{ maxWidth: "60ch" }}>
+          <div className="hero-copy stack g18">
             <span className="eye" style={{ alignSelf: "flex-start" }}>Services</span>
-            <h1 className="dsp d1">
-              What we make
-              <br />
-              <span className="grad">for L<Amp />D teams.</span>
+            <h1 className="dsp d1 oneline">
+              What we make <span className="grad">for L<Amp />D teams.</span>
             </h1>
-          </div>
-          <Reel seed={30} label="Selected work — now playing" showShot={false} />
-          <div className="stack g18" style={{ maxWidth: "60ch" }}>
             <p className="lede">
               Every engagement ships LMS-ready — SCORM-packaged, captioned,
               WCAG-conformant and version-controlled. Scope is set on the call, and the
@@ -121,6 +116,7 @@ export default function Services() {
               <Link href="/about" className="btn btn-g">Who we are</Link>
             </div>
           </div>
+          <Reel seed={30} label="Selected work — now playing" showShot={false} />
         </div>
       </section>
 

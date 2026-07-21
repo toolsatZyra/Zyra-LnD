@@ -65,7 +65,9 @@ button { font: inherit; }
   margin: 0;
   text-wrap: balance;
 }
-.d1 { font-size: clamp(36px, 5.6vw, 72px); }
+/* Sized so the longest hero headline (37 chars) holds one line inside the
+   1240px container without touching the edges. */
+.d1 { font-size: clamp(34px, 5.1vw, 66px); }
 .d2 { font-size: clamp(26px, 3.5vw, 48px); }
 .d3 { font-size: clamp(18px, 1.9vw, 26px); }
 .d4 { font-size: clamp(15px, 1.35vw, 18.5px); }
@@ -263,6 +265,19 @@ p { margin: 0; }
 
 /* ── hero ── */
 .hero { padding: clamp(40px, 5.4vw, 80px) 0 clamp(28px, 3.4vw, 48px); background: var(--hero-g); position: relative; overflow: hidden; }
+
+/* Hero copy block. No ch-based max-width — that is measured against the body
+   font and would wrap the much larger display headline. The lede keeps its
+   own measure instead. */
+.hero-copy { max-width: 100%; }
+.hero-copy .lede { max-width: 62ch; }
+
+/* Headline holds one line on desktop. Below ~900px there isn't the room, so
+   it wraps naturally rather than shrinking to an unreadable size. */
+.oneline { white-space: nowrap; }
+@media (max-width: 900px) {
+  .oneline { white-space: normal; text-wrap: balance; }
+}
 
 /* ── metric cards ── */
 .met { background: var(--surf); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 10px rgba(27,18,53,.05); }

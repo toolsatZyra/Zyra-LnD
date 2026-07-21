@@ -51,16 +51,11 @@ export default function About() {
       <section className="hero">
         <div className="glow" style={{ width: 400, height: 400, background: "var(--acc2)", left: -120, top: -150, opacity: 0.14 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
-          <div className="stack g18" style={{ maxWidth: "62ch" }}>
+          <div className="hero-copy stack g18">
             <span className="eye" style={{ alignSelf: "flex-start" }}>About us</span>
-            <h1 className="dsp d1">
-              A production studio,
-              <br />
-              <span className="grad">pointed at L<Amp />D.</span>
+            <h1 className="dsp d1 oneline">
+              A production studio, <span className="grad">pointed at L<Amp />D.</span>
             </h1>
-          </div>
-          <Reel seed={50} label="Studio reel — now playing" corner="Gurgaon · Est. 2023" showShot={false} />
-          <div className="stack g18" style={{ maxWidth: "62ch" }}>
             <p className="lede">
               Zyra is an AI-native content studio in Gurgaon. We make brand films,
               commercials and micro drama for clients who pay for delivery, on deadline, at
@@ -68,6 +63,7 @@ export default function About() {
               business with the biggest video appetite and the smallest budget.
             </p>
           </div>
+          <Reel seed={50} label="Studio reel — now playing" corner="Gurgaon · Est. 2023" showShot={false} />
         </div>
       </section>
 

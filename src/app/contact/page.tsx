@@ -24,10 +24,8 @@ export default function Contact() {
         <div className="wrap grid-x c2" style={{ position: "relative", zIndex: 2, gap: "clamp(24px,4vw,60px)", alignItems: "start" }}>
           <div className="stack g18">
             <span className="eye" style={{ alignSelf: "flex-start" }}>Book a consultation</span>
-            <h1 className="dsp d1">
-              Send us one module
-              <br />
-              <span className="grad">you&apos;re dreading.</span>
+            <h1 className="dsp d1 oneline">
+              Send us one module <span className="grad">you&apos;re dreading.</span>
             </h1>
             <p className="lede">
               The one that&apos;s out of date, too boring to finish, or quoted at a number

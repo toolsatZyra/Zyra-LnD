@@ -49,12 +49,10 @@ export default function Pricing() {
       <section className="hero">
         <div className="glow" style={{ width: 400, height: 400, background: "var(--acc)", right: -100, top: -160, opacity: 0.14 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
-          <div className="stack g18 ctr" style={{ maxWidth: "60ch", textAlign: "center" }}>
+          <div className="hero-copy stack g18 ctr" style={{ textAlign: "center" }}>
             <span className="eye">Pricing</span>
-            <h1 className="dsp d1">
-              Priced per module,
-              <br />
-              <span className="grad">not per shoot day.</span>
+            <h1 className="dsp d1 oneline">
+              Priced per module, <span className="grad">not per shoot day.</span>
             </h1>
             <p className="lede" style={{ margin: "0 auto" }}>
               That single difference is why library-scale rollout clears the budget line.
