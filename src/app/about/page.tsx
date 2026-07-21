@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reel from "@/components/Reel";
-import Frame from "@/components/Frame";
 import CtaBox from "@/components/CtaBox";
 
 export const metadata: Metadata = {
@@ -28,12 +27,6 @@ const VALUES: [string, string][] = [
   ["Human-directed, always", "The brief, script and story are human decisions. AI accelerates execution. Every frame is reviewed before it ships."],
   ["Finish the job", "A deliverable that needs three weeks of someone else's work before it can be used isn't a deliverable."],
   ["Stay in our lane", "We make video. We don't sell learning strategy or assessment design, and we'll say when you need someone who does."],
-];
-
-const TEAM: [number, string, string, string][] = [
-  [51, "Shiban", "Co-founder & Chief AI Officer", "Sets the production doctrine — what the pipeline runs on, and where human direction stays non-negotiable."],
-  [52, "Siddhi", "Founding Lead, AI Creative & Products", "Builds the apps, automations and delivery systems behind the studio, including the packaging pipeline."],
-  [53, "Himangini", "Lead AI Film Maker", "Works at the frontier of AI cinema — shaping performance and emotion so a compliance module doesn't feel like one."],
 ];
 
 const LIMITS: [string, string][] = [
@@ -141,29 +134,6 @@ export default function About() {
               <div className="card" key={title}>
                 <h3 className="dsp d4">{title}</h3>
                 <p className="bxs">{body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="band">
-        <div className="wrap stack g34">
-          <div className="head rv">
-            <p className="m m-a">Leadership</p>
-            <h2 className="dsp d2">The people who&apos;d<br />be on your project.</h2>
-          </div>
-          <div className="grid-x c3 rv">
-            {TEAM.map(([seed, name, role, body]) => (
-              <div className="stack g14" key={name}>
-                <div className="vid" style={{ aspectRatio: "4/5" }}>
-                  <Frame seed={seed} />
-                </div>
-                <div className="stack g6">
-                  <h3 className="dsp d4">{name}</h3>
-                  <p className="m">{role}</p>
-                  <p className="bxs">{body}</p>
-                </div>
               </div>
             ))}
           </div>

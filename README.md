@@ -30,7 +30,7 @@ Five routes, all statically prerendered:
 | `/`         | Positioning, formats, use cases, before/after, comparison, delivery, FAQ  |
 | `/services` | Ten offerings, each with ideal use case and business outcome              |
 | `/pricing`  | Four tiers — publishes **scoping logic**, not rupee figures               |
-| `/about`    | Mission, story, values, leadership, published limitations                 |
+| `/about`    | Mission, story, differentiators, values, published limitations, trust     |
 | `/contact`  | Consultation booking                                                      |
 
 ---
