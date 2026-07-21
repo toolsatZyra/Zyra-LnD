@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import Reel from "@/components/Reel";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Book a consultation",
   description:
     "Send us one module you're dreading. We'll come back with how we'd make it, what it would take, and a free audit of the curriculum you already have.",

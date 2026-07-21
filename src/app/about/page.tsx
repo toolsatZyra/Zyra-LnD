@@ -5,6 +5,7 @@ import CtaBox from "@/components/CtaBox";
 import Amp, { withAmp } from "@/components/Amp";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About Us",
   description:
     "Zyra L&D is the training arm of Zyra, an AI-native content studio in Gurgaon producing brand films, commercials and micro drama at broadcast standard.",

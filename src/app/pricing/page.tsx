@@ -4,6 +4,7 @@ import PricingTiers from "@/components/PricingTiers";
 import CtaBox from "@/components/CtaBox";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pricing" },
   title: "Pricing",
   description:
     "Priced per module, not per shoot day. See exactly how we scope an engagement and what moves the number, so you can build a budget before you speak to us.",

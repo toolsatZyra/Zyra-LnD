@@ -162,8 +162,29 @@ Deliberate placeholders. Each is marked in the UI and in code comments.
 - [ ] **Reconcile the creative count.** This site says 5,000+; the main site's history card
       says 7,000+.
 - [ ] **Wire `ContactForm` to a real endpoint.** Currently a client-side acknowledgement.
-- [ ] **Set the production domain** in `src/app/layout.tsx` (`SITE`), currently
-      `https://lnd.thezyra.in`.
+- [ ] **Set the production domain** in `src/lib/site.ts` (`SITE`), currently
+      `https://lnd.thezyra.in`. Metadata, canonicals, sitemap, robots and OG URLs
+      all read from it.
+
+---
+
+## Discoverability
+
+Generated from Next's metadata file conventions — nothing to maintain by hand.
+
+| Route | Source | Notes |
+| --- | --- | --- |
+| `/sitemap.xml` | `app/sitemap.ts` | All five routes, driven by `ROUTES` in `lib/site.ts` |
+| `/robots.txt` | `app/robots.ts` | Allows GPTBot, ClaudeBot, PerplexityBot and Google-Extended explicitly |
+| `/opengraph-image` | `app/opengraph-image.tsx` | 1200×630, rendered at build; also serves the Twitter card |
+| `/icon.png` | `app/icon.png` | Zyra mark on brand ink |
+
+**Canonicals are declared per route, never in the root layout.** Child routes
+inherit root metadata, so a canonical set at layout level points every page at
+`/` and marks the rest as duplicates.
+
+AI crawlers are allowed deliberately: the site's argument rests on being
+quotable in AI search, not merely indexed.
 
 ---
 

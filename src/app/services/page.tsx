@@ -6,6 +6,7 @@ import CtaBox from "@/components/CtaBox";
 import Amp, { withAmp } from "@/components/Amp";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services" },
   title: "Services",
   description:
     "Onboarding, compliance, safety, product training, enablement, microlearning, animation, localisation, LMS packaging and library refresh — every engagement delivered LMS-ready.",

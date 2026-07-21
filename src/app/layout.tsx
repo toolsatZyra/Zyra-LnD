@@ -3,6 +3,7 @@ import { Archivo, Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ScrollMotion from "@/components/ScrollMotion";
+import { SITE } from "@/lib/site";
 import "./globals.css";
 
 /* Display — Archivo carries a width axis, so we get a true condensed cut
@@ -29,8 +30,6 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE = "https://lnd.thezyra.in";
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
@@ -48,6 +47,9 @@ export const metadata: Metadata = {
       "Broadcast-grade training video in days, not quarters. SCORM-packaged, captioned and LMS-tested on delivery.",
   },
   robots: { index: true, follow: true },
+  /* No canonical here — child routes inherit root metadata, so a canonical
+     set at this level would point every page at "/" and mark the rest as
+     duplicates. Each route declares its own. */
 };
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reel from "@/components/Reel";
 import Frame from "@/components/Frame";
@@ -6,6 +7,10 @@ import FormatTabs from "@/components/FormatTabs";
 import StoryCarousel from "@/components/StoryCarousel";
 import CtaBox from "@/components/CtaBox";
 import Amp, { withAmp } from "@/components/Amp";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const WHY: [string, string, string][] = [
   ["01", "Broadcast-grade craft", "Scripted, scored, graded and finished to delivery spec — cinematography and sound design, not slides with a voiceover laid over them."],
