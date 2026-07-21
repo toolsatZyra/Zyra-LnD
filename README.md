@@ -130,9 +130,20 @@ Self-hosted via `next/font` — no external CDN, no layout shift.
 `public/zyra-logo.png` is cropped from the main site's `zyra-logo.webp`, which is **83%
 transparent padding** (content is 1406×665 inside a 2616×2152 canvas).
 
-The asset is a **white wordmark with a teal accent** `rgb(104, 181, 162)`, built for the
-dark main site. It sits on a dark chip rather than being inverted — inverting looks
-correct at a glance but flips the teal to maroon and breaks the brand colour.
+That asset is a **white wordmark with a teal accent** `rgb(104, 181, 162)`, built for the
+dark main site — invisible on this light ground. `public/zyra-logo-dark.png` is the
+light-ground variant used in the nav and footer.
+
+```bash
+node scripts/make-dark-logo.mjs
+```
+
+The script recolours only near-neutral pixels to ink, carrying original luminance into
+alpha so antialiased edges stay smooth, and leaves every saturated pixel untouched.
+Measured result: **186,487 → 124** bright pixels, teal accent **57,128 → 57,126**.
+
+> **Never use `filter: invert()` on this mark.** It looks correct at a glance and flips
+> the teal accent to maroon.
 
 ---
 

@@ -8,15 +8,13 @@ export default function Footer() {
         <div className="foot-g">
           <div className="stack g10">
             <span className="logo">
-              <span className="logo-chip">
-                <Image
-                  src="/zyra-logo.png"
-                  alt="Zyra"
-                  width={1520}
-                  height={760}
-                  className="logo-mark"
-                />
-              </span>
+              <Image
+                src="/zyra-logo-dark.png"
+                alt="Zyra"
+                width={1520}
+                height={760}
+                className="logo-mark"
+              />
               <span className="logo-div" aria-hidden="true" />
               <span className="logo-sub">L&amp;D</span>
             </span>

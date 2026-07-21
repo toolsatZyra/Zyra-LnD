@@ -202,16 +202,13 @@ p { margin: 0; }
   height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 14px;
 }
 /* Logo lockup — Zyra wordmark + L&D sub-brand, divided by a hairline.
-   The brand asset is a white wordmark with a teal accent, built for the dark
-   main site. It sits on a dark chip here rather than being inverted — invert
-   would flip the teal accent to maroon and break the brand colour. */
-.logo { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
-.logo-chip {
-  display: inline-flex; align-items: center; justify-content: center;
-  background: var(--bg3); border-radius: 8px; padding: 7px 11px;
-}
-.logo-mark { height: 18px; width: auto; display: block; }
-.logo-div { width: 1px; height: 18px; background: var(--line2); flex-shrink: 0; }
+   zyra-logo-dark.png is generated from the brand asset: the white wordmark is
+   recoloured to ink for this light ground while the teal accent is preserved
+   pixel-for-pixel. Never use `filter: invert()` here — it flips the teal to
+   maroon. See scripts/make-dark-logo.mjs */
+.logo { display: inline-flex; align-items: center; gap: 11px; white-space: nowrap; }
+.logo-mark { height: 21px; width: auto; display: block; }
+.logo-div { width: 1px; height: 16px; background: var(--line2); flex-shrink: 0; }
 .logo-sub {
   font-family: var(--font-display), sans-serif;
   font-weight: 800; font-stretch: 84%; font-size: 15px;

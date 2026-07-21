@@ -22,16 +22,14 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav-in">
         <Link href="/" className="logo" aria-label="Zyra L&D — home">
-          <span className="logo-chip">
-            <Image
-              src="/zyra-logo.png"
-              alt="Zyra"
-              width={1520}
-              height={760}
-              priority
-              className="logo-mark"
-            />
-          </span>
+          <Image
+            src="/zyra-logo-dark.png"
+            alt="Zyra"
+            width={1520}
+            height={760}
+            priority
+            className="logo-mark"
+          />
           <span className="logo-div" aria-hidden="true" />
           <span className="logo-sub">L&amp;D</span>
         </Link>
