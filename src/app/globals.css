@@ -214,11 +214,13 @@ p { margin: 0; }
 .logo { display: inline-flex; align-items: center; gap: 11px; white-space: nowrap; }
 .logo-mark { height: 21px; width: auto; display: block; }
 .logo-div { width: 1px; height: 16px; background: var(--line2); flex-shrink: 0; }
-/* Sub-brand picks up the logo's own teal, darkened for legible contrast. */
+/* Sub-brand is a descriptor, not a brand-colour moment. Set in the theme's
+   muted ink so the logo's teal accent stays the only colour in the mark and
+   the violet CTA stays the only loud element in the bar. */
 .logo-sub {
   font-family: var(--font-body), sans-serif;
-  font-weight: 600; font-size: 13px;
-  letter-spacing: .01em; color: var(--brand-teal-ink);
+  font-weight: 500; font-size: 13px;
+  letter-spacing: .01em; color: var(--fg2);
 }
 .nl { display: flex; gap: 26px; }
 .nl a { font-size: 13px; color: var(--fg2); padding: 4px 0; position: relative; transition: color .2s; }
