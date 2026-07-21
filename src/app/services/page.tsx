@@ -102,7 +102,6 @@ export default function Services() {
         <div className="glow" style={{ width: 400, height: 400, background: "var(--acc)", right: -100, top: -150, opacity: 0.15 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
           <div className="hero-copy stack g18">
-            <span className="eye" style={{ alignSelf: "flex-start" }}>Services</span>
             <h1 className="dsp d1 oneline">
               What we make <span className="grad">for L<Amp />D teams.</span>
             </h1>

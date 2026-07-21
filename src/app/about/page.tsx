@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   title: "About Us",
   description:
-    "Zyra L&D is the training arm of Zyra, an AI-native content studio in Gurgaon producing brand films, commercials and micro drama at broadcast standard.",
+    "Zyra L&D is the training arm of Zyra, an AI-native content studio producing brand films, commercials and micro drama at broadcast standard.",
 };
 
 const STORY: [string, string, string][] = [
@@ -52,18 +52,17 @@ export default function About() {
         <div className="glow" style={{ width: 400, height: 400, background: "var(--acc2)", left: -120, top: -150, opacity: 0.14 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
           <div className="hero-copy stack g18">
-            <span className="eye" style={{ alignSelf: "flex-start" }}>About us</span>
             <h1 className="dsp d1 oneline">
               A production studio, <span className="grad">pointed at L<Amp />D.</span>
             </h1>
             <p className="lede">
-              Zyra is an AI-native content studio in Gurgaon. We make brand films,
+              Zyra is an AI-native content studio. We make brand films,
               commercials and micro drama for clients who pay for delivery, on deadline, at
               broadcast standard. Zyra L&amp;D is that same floor, aimed at the part of the
               business with the biggest video appetite and the smallest budget.
             </p>
           </div>
-          <Reel seed={50} label="Studio reel — now playing" corner="Gurgaon · Est. 2023" showShot={false} />
+          <Reel seed={50} label="Studio reel — now playing" corner="Est. 2023" showShot={false} />
         </div>
       </section>
 

@@ -84,7 +84,7 @@ export default function OpengraphImage() {
           }}
         >
           <div>Onboarding · Compliance · Safety · Product</div>
-          <div>Gurgaon, India</div>
+          <div>Delivering worldwide</div>
         </div>
       </div>
     ),

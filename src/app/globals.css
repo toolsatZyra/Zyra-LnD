@@ -408,14 +408,17 @@ details .a { padding: 0 18px 16px; font-size: 13.5px; line-height: 1.68; color: 
 .mq-in { display: flex; gap: 46px; width: max-content; animation: mq 36s linear infinite; }
 @keyframes mq { to { transform: translateX(-50%); } }
 .mq:hover .mq-in { animation-play-state: paused; }
-/* Height is set per logo inline to even out optical weight; width follows. */
+/* Assets are already painted in theme ink on transparent (see
+   scripts/build-client-logos.mjs), so no greyscale filter is needed —
+   opacity alone sets them back from the copy. Height is per logo inline to
+   even out optical weight; width follows. */
 .mq-logo {
   width: auto; display: block; flex-shrink: 0;
-  opacity: .58; filter: grayscale(1);
-  transition: opacity .25s, filter .25s;
+  opacity: .42;
+  transition: opacity .25s;
 }
-.mq:hover .mq-logo { opacity: .78; }
-.mq-logo:hover { opacity: 1; filter: grayscale(0); }
+.mq:hover .mq-logo { opacity: .55; }
+.mq-logo:hover { opacity: .82; }
 @media (prefers-reduced-motion: reduce) { .mq-in { animation: none; } }
 
 /* ── responsive ── */

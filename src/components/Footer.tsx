@@ -20,7 +20,7 @@ export default function Footer() {
             </span>
             <p className="bxs" style={{ maxWidth: "34ch" }}>
               Corporate training video, produced AI-native and delivered
-              LMS-ready. Gurgaon, India.
+              LMS-ready.
             </p>
           </div>
 

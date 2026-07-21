@@ -23,7 +23,6 @@ export default function Contact() {
         <div className="glow" style={{ width: 400, height: 400, background: "var(--acc)", right: -100, top: -150, opacity: 0.15 }} />
         <div className="wrap grid-x c2" style={{ position: "relative", zIndex: 2, gap: "clamp(24px,4vw,60px)", alignItems: "start" }}>
           <div className="stack g18">
-            <span className="eye" style={{ alignSelf: "flex-start" }}>Book a consultation</span>
             <h1 className="dsp d1 oneline">
               Send us one module <span className="grad">you&apos;re dreading.</span>
             </h1>
@@ -33,7 +32,7 @@ export default function Contact() {
               what it would take.
             </p>
             <ContactForm />
-            <p className="m">Gurgaon, India · delivering to teams worldwide</p>
+            <p className="m">Delivering to teams worldwide</p>
           </div>
 
           <div className="stack g18">

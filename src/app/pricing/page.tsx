@@ -50,7 +50,6 @@ export default function Pricing() {
         <div className="glow" style={{ width: 400, height: 400, background: "var(--acc)", right: -100, top: -160, opacity: 0.14 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
           <div className="hero-copy stack g18 ctr" style={{ textAlign: "center" }}>
-            <span className="eye">Pricing</span>
             <h1 className="dsp d1 oneline">
               Priced per module, <span className="grad">not per shoot day.</span>
             </h1>

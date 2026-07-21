@@ -119,9 +119,6 @@ export default function Home() {
         <div className="glow" style={{ width: 330, height: 330, background: "var(--acc2)", left: -110, bottom: -150, opacity: 0.13 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
           <div className="hero-copy stack g18">
-            <span className="eye" style={{ alignSelf: "flex-start" }}>
-              AI-native production studio · Gurgaon
-            </span>
             <h1 className="dsp d1 oneline">
               Corporate training, <span className="grad">made like cinema.</span>
             </h1>
@@ -253,7 +250,9 @@ export default function Home() {
         <div className="wrap stack g34">
           <div className="head rv ctr">
             <p className="m m-a">The difference</p>
-            <h2 className="dsp d2">From quarter-long production cycles<br />to a rollout you can update mid-flight.</h2>
+            <h2 className="dsp d2 oneline">
+              From quarter-long cycles to mid-flight updates.
+            </h2>
           </div>
           <div className="ba rv">
             <div className="ba-col">

@@ -41,7 +41,7 @@ export default function CtaBox({
             </div>
             <div className="stack g14">
               {showForm ? <ContactForm /> : children}
-              <p className="m">Gurgaon, India · delivering to teams worldwide</p>
+              <p className="m">Delivering to teams worldwide</p>
             </div>
           </div>
         </div>
