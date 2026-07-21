@@ -16,7 +16,7 @@ export default function Footer() {
                 className="logo-mark"
               />
               <span className="logo-div" aria-hidden="true" />
-              <span className="logo-sub">L&amp;D</span>
+              <span className="logo-sub">Learning &amp; Development</span>
             </span>
             <p className="bxs" style={{ maxWidth: "34ch" }}>
               Corporate training video, produced AI-native and delivered

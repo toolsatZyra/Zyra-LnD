@@ -16,6 +16,11 @@
   --acc: #6c4df6;
   --acc2: #ff5c49;
   --acc-soft: rgba(108, 77, 246, 0.1);
+  /* Brand teal, lifted from the logo accent rgb(104,181,162).
+     --brand-teal is the mark's own value; --brand-teal-ink is the darkened
+     tone used for text, since the original only reaches ~2.4:1 on bone. */
+  --brand-teal: #68b5a2;
+  --brand-teal-ink: #2d6e60;
   --line: rgba(27, 18, 53, 0.1);
   --line2: rgba(27, 18, 53, 0.18);
   --btn-fg: #ffffff;
@@ -209,10 +214,11 @@ p { margin: 0; }
 .logo { display: inline-flex; align-items: center; gap: 11px; white-space: nowrap; }
 .logo-mark { height: 21px; width: auto; display: block; }
 .logo-div { width: 1px; height: 16px; background: var(--line2); flex-shrink: 0; }
+/* Sub-brand picks up the logo's own teal, darkened for legible contrast. */
 .logo-sub {
-  font-family: var(--font-display), sans-serif;
-  font-weight: 800; font-stretch: 84%; font-size: 15px;
-  letter-spacing: .04em; color: var(--acc);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600; font-size: 13px;
+  letter-spacing: .01em; color: var(--brand-teal-ink);
 }
 .nl { display: flex; gap: 26px; }
 .nl a { font-size: 13px; color: var(--fg2); padding: 4px 0; position: relative; transition: color .2s; }
@@ -393,7 +399,10 @@ details .a { padding: 0 18px 16px; font-size: 13.5px; line-height: 1.68; color: 
   .drv { grid-template-columns: 1fr; gap: 6px; }
   .nav-in { height: 56px; padding: 0 16px; gap: 8px; }
   .nav .btn-a { padding: 10px 14px; font-size: 11.5px; }
-  .logo { font-size: 12.5px; }
+  /* Full sub-brand is too wide for the mobile bar — mark alone carries it.
+     Footer keeps the complete lockup. */
+  .nav .logo-div, .nav .logo-sub { display: none; }
+  .nav .logo-mark { height: 19px; }
   .st-card { flex: 0 0 78%; }
   .st-nav { display: none; }
 }

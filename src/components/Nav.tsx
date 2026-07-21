@@ -21,7 +21,7 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav-in">
-        <Link href="/" className="logo" aria-label="Zyra L&D — home">
+        <Link href="/" className="logo" aria-label="Zyra Learning &amp; Development — home">
           <Image
             src="/zyra-logo-dark.png"
             alt="Zyra"
@@ -31,7 +31,7 @@ export default function Nav() {
             className="logo-mark"
           />
           <span className="logo-div" aria-hidden="true" />
-          <span className="logo-sub">L&amp;D</span>
+          <span className="logo-sub">Learning &amp; Development</span>
         </Link>
 
         <div className="nl">
