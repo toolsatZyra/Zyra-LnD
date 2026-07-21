@@ -234,7 +234,7 @@ export default function Home() {
         <div className="wrap stack g34">
           <div className="head ctr rv">
             <span className="eye" style={{ borderColor: "color-mix(in srgb, var(--acc) 32%, transparent)", color: "var(--acc)" }}>
-              Trusted by teams at Adani, NDTV <Amp /> Swiggy
+              Trusted by teams at Swiggy, Meesho <Amp /> CARS24
             </span>
             <h2 className="dsp d2">
               Why L<Amp />D teams<br />choose Zyra.
