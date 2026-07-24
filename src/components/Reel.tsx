@@ -31,7 +31,7 @@ export default function Reel({
 }) {
   const cornerContent = corner ?? (
     <>
-      Zyra L<Amp />D · 2026
+      Probbit L<Amp />D · 2026
     </>
   );
   const [shot, setShot] = useState(0);

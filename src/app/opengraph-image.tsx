@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Zyra Learning & Development — corporate training, made like cinema";
+  "Probbit Learning & Development — corporate training video built to hold attention";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -28,13 +28,13 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
           <div
             style={{
-              fontSize: 26,
-              fontWeight: 700,
-              color: "#1B1235",
-              letterSpacing: "0.02em",
+              fontSize: 30,
+              fontWeight: 800,
+              color: "#6C4DF6",
+              letterSpacing: "-0.02em",
             }}
           >
-            ZYRA
+            probbit
           </div>
           <div style={{ width: 1, height: 24, background: "rgba(27,18,53,.22)" }} />
           <div style={{ fontSize: 22, color: "#5E5578" }}>
@@ -55,8 +55,8 @@ export default function OpengraphImage() {
               color: "#1B1235",
             }}
           >
-            <div>Corporate training,</div>
-            <div style={{ color: "#6C4DF6" }}>made like cinema.</div>
+            <div>Corporate training videos</div>
+            <div style={{ color: "#6C4DF6" }}>built to hold attention.</div>
           </div>
           <div
             style={{
@@ -66,8 +66,8 @@ export default function OpengraphImage() {
               maxWidth: 880,
             }}
           >
-            Broadcast-grade training video in days, not quarters — localised,
-            SCORM-packaged and LMS-ready on delivery.
+            Storytelling, learning design and AI-first production — training
+            video built to earn attention and improve outcomes.
           </div>
         </div>
 

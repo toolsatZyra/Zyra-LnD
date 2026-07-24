@@ -22,12 +22,12 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav-in">
-        <Link href="/" className="logo" aria-label="Zyra Learning &amp; Development — home">
+        <Link href="/" className="logo" aria-label="Probbit Learning &amp; Development — home">
           <Image
-            src="/zyra-logo-dark.png"
-            alt="Zyra"
-            width={1520}
-            height={760}
+            src="/probbit-logo.png"
+            alt="Probbit"
+            width={900}
+            height={241}
             priority
             className="logo-mark"
           />

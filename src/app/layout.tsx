@@ -33,18 +33,18 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "Zyra L&D — Corporate training video, produced AI-native",
-    template: "%s · Zyra L&D",
+    default: "Probbit L&D — Corporate training video built to hold attention",
+    template: "%s · Probbit L&D",
   },
   description:
-    "We produce broadcast-grade training video across the learning lifecycle — onboarding, compliance, safety and product enablement. Built AI-native in days, localised into every language your workforce speaks, delivered LMS-ready.",
+    "Probbit combines storytelling, learning design and AI-first production to turn onboarding, compliance, safety, sales and product training into video built to hold attention and improve learning outcomes.",
   openGraph: {
     type: "website",
-    siteName: "Zyra L&D",
+    siteName: "Probbit L&D",
     url: SITE,
-    title: "Corporate training, made like cinema.",
+    title: "Corporate training videos built to hold attention.",
     description:
-      "Broadcast-grade training video in days, not quarters. SCORM-packaged, captioned and LMS-tested on delivery.",
+      "Storytelling, learning design and AI-first production — training video built to earn attention and improve outcomes.",
   },
   robots: { index: true, follow: true },
   /* No canonical here — child routes inherit root metadata, so a canonical

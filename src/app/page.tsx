@@ -13,44 +13,49 @@ export const metadata: Metadata = {
 };
 
 const WHY: [string, string, string][] = [
-  ["01", "Broadcast-grade craft", "Scripted, scored, graded and finished to delivery spec — cinematography and sound design, not slides with a voiceover laid over them."],
-  ["02", "Production in days", "Films in five to seven days, short-form in about one. No crew, location or presenter availability gating your rollout."],
-  ["03", "Localised at scale", "Native lip-sync and re-rendered on-screen text per language, generated from one master build — not subtitles pasted over English."],
-  ["04", "Updated mid-rollout", "We retain every project file. A regulatory change becomes a scene-level re-cut, not a fresh production cycle."],
-  ["05", "LMS-ready on delivery", "SCORM-packaged, captioned and WCAG 2.1 AA conformant, tested in your environment. Not a folder of raw exports."],
+  ["01", "Built to earn attention", "Every module begins with the learner's reality. We use relevance, curiosity, visual storytelling and realistic situations to give people a reason to continue watching."],
+  ["02", "Designed for learning outcomes", "We structure every module around what the learner should understand, remember or do differently — not around how many slides need to be converted."],
+  ["03", "Produced AI-first", "AI lets us create characters, environments, scenarios, animation and multiple visual directions without the cost and complexity of a conventional shoot."],
+  ["04", "Localised at scale", "Create multiple language and regional versions from one approved master while maintaining consistent visuals, terminology and brand standards."],
+  ["05", "Ready to deploy", "Receive finished videos, captions, transcripts, accessibility support and LMS-ready packages based on your requirements."],
 ];
 
-const METRICS: [number, string, string, string, string][] = [
-  [2, "4.2×", "faster from brief to a delivered induction film", "Onboarding", "00:02:14"],
-  [3, "9", "languages produced from a single master build", "Localisation", "00:11:38"],
-  [4, "1 day", "to re-cut the module when the policy changed", "Compliance", "00:04:52"],
-  [5, "40+", "modules delivered inside a single quarter", "Library build", "00:06:07"],
+/* Qualitative outcomes only — no percentages or statistics until client-verified
+   figures clear approval (per the home-page publishing note). */
+const OUTCOMES: [string, string][] = [
+  ["Higher completion", "Shorter, better-structured and more engaging modules give learners a stronger reason to reach the end."],
+  ["Better retention", "Relevant scenarios, visual explanations and active recall help important information become easier to remember."],
+  ["Faster rollout", "AI-first production reduces dependence on actors, locations, crews and repeated production schedules."],
+  ["Easier updates", "Individual scenes, product details, policy references and language versions can be updated without rebuilding the whole module."],
 ];
 
-const USE_CASES: [number, string, string, string][] = [
-  [6, "Onboarding & induction", "A hero welcome film plus the short-module series behind it. The most-rewatched content you own, and usually the most neglected.", "00:02:14"],
-  [7, "Compliance & policy", "POSH, code of conduct, privacy, cyber. Scenario-led rather than narrated slides, with records that stand up to audit.", "00:11:38"],
-  [8, "Safety, EHS & SOP", "Procedure video built around your equipment and your floor. The one category where a generic library is worse than nothing.", "00:04:52"],
+const USE_CASES: [number, string, string, string, string][] = [
+  [6, "Employee onboarding & induction", "Transform induction decks, company presentations and policy documents into a structured first-week learning experience.", "Help new employees understand the company, role, systems and expectations faster.", "00:02:14"],
+  [7, "Compliance & policy training", "Turn POSH, ethics, code of conduct, data privacy and cybersecurity policies into realistic, scenario-led learning.", "Move beyond passive policy reading towards better awareness and decision-making.", "00:11:38"],
+  [8, "Safety, EHS & SOP training", "Visualise procedures, risks, environments and consequences so employees can see how the correct process should be performed.", "Improve procedural clarity for plant, field, logistics and operations teams.", "00:04:52"],
+  [17, "Product & systems training", "Explain products, tools, features and workflows through demonstrations, visual storytelling and contextual examples.", "Improve product understanding and reduce repetitive support requirements.", "00:06:07"],
+  [20, "Sales & channel enablement", "Build realistic customer conversations, product pitches and objection-handling scenarios for employees, partners and dealers.", "Create more consistent messaging and accelerate representative readiness.", "00:08:41"],
+  [14, "Leadership & behavioural learning", "Use workplace situations to teach feedback, communication, collaboration, inclusion, accountability and management skills.", "Make behavioural concepts relevant to the decisions employees face every day.", "00:05:19"],
 ];
 
 const BEFORE = [
-  "Quarter-long production cycles, most of it crew and location scheduling",
-  "Every policy revision triggers a full reshoot, from call sheet onward",
-  "Single-language masters, or a separate production per market",
-  "Raw exports handed over — packaging, tracking and rollout left to you",
-  "Priced per shoot day, so library-scale never clears the budget line",
-  "Captions and audio description quoted as line-item extras",
-  "Completion rates nobody wants to put in front of the board",
+  "Presentations converted into videos",
+  "Robotic presenters reading on-screen text",
+  "Generic stock footage with no connection to the workplace",
+  "Long modules covering too many objectives",
+  "One format used for every kind of subject",
+  "Production that becomes expensive to update",
+  "Completion measured without knowing whether people paid attention",
 ];
 
 const AFTER = [
-  "Broadcast-grade modules in days — five to seven for a film, about one for short-form",
-  "Re-cut the affected scene; the rest of the module holds untouched",
-  "Every language re-voiced and re-rendered from a single master build",
-  "SCORM-packaged and LMS-tested, tracking learner progress from day one",
-  "Priced per module, so an entire curriculum clears the same budget line",
-  "Captions, transcripts and WCAG 2.1 AA built in, not bolted on",
-  "Learner engagement that survives a look from your CFO",
+  "Training structured around learner attention",
+  "Realistic stories, demonstrations and visual explanations",
+  "The right format selected for each learning objective",
+  "Focused modules designed to reduce cognitive overload",
+  "AI-first production supported by human creative direction",
+  "Easier localisation, versioning and updates",
+  "Measurement linked to understanding and performance",
 ];
 
 const COMPARE: string[][] = [
@@ -119,22 +124,22 @@ export default function Home() {
         <div className="glow" style={{ width: 330, height: 330, background: "var(--acc2)", left: -110, bottom: -150, opacity: 0.13 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
           <div className="hero-copy stack g18">
-            <h1 className="dsp d1 oneline">
-              Corporate training, <span className="grad">made like cinema.</span>
+            <h1 className="dsp d1 d1-hero oneline">
+              Corporate training videos <span className="grad">built to hold attention.</span>
             </h1>
             <p className="lede">
-              We produce broadcast-grade training video across the entire learning
-              lifecycle — onboarding, compliance, safety and product enablement. Built
-              AI-native in days rather than quarters, localised into every language your
-              workforce speaks, and delivered SCORM-packaged, captioned and LMS-tested on
-              day one.
+              Most training content is technically completed but rarely watched,
+              remembered or applied. Probbit combines storytelling, learning design and
+              AI-first production to transform onboarding, compliance, safety, sales and
+              product training into engaging content built to hold attention and improve
+              learning outcomes.
             </p>
             <div className="brow">
-              <Link href="/contact" className="btn btn-a">Book a consultation</Link>
-              <Link href="/services" className="btn btn-g">Explore services</Link>
+              <Link href="/contact" className="btn btn-a">Transform a training module</Link>
+              <Link href="/services" className="btn btn-g">Explore our services</Link>
             </div>
           </div>
-          <Reel seed={1} />
+          <Reel seed={1} label="See what boring training can become" />
         </div>
       </section>
 
@@ -143,8 +148,15 @@ export default function Home() {
       <section className="band">
         <div className="wrap stack g34">
           <div className="head rv">
-            <p className="m m-a">Why Zyra</p>
-            <h2 className="dsp d2">A studio built for every stage<br />of the learning lifecycle.</h2>
+            <p className="m m-a">Why Probbit</p>
+            <h2 className="dsp d2">AI makes production faster. We use it to make training better.</h2>
+            <p className="lede">
+              AI video tools can generate presenters, voices and visuals. But tools alone
+              don&apos;t know what will hold attention, simplify a difficult concept or
+              help someone remember the right action. Probbit combines AI production with
+              human writing, creative direction, learning structure, editing and quality
+              control to deliver content that looks better and works harder.
+            </p>
           </div>
           <div className="grid-x c5 rv">
             {WHY.map(([n, title, body]) => (
@@ -156,7 +168,7 @@ export default function Home() {
             ))}
           </div>
           <div className="brow rv">
-            <Link href="/services" className="btn btn-g">See it in action</Link>
+            <Link href="/services" className="btn btn-g">See how we work</Link>
           </div>
         </div>
       </section>
@@ -165,26 +177,23 @@ export default function Home() {
         <div className="wrap stack g34">
           <div className="head rv">
             <p className="m m-a">Outcomes</p>
-            <h2 className="dsp d2">Real learning impact,<br />across every programme.</h2>
+            <h2 className="dsp d2">Better content creates better learning outcomes.</h2>
+            <p className="lede">
+              A completed module is not always an effective module. We help teams create
+              training designed to improve attention, understanding, knowledge recall and
+              real-world application.
+            </p>
           </div>
           <div className="grid-x c4 rv">
-            {METRICS.map(([seed, big, body, label, tc]) => (
-              <div className="met" key={label}>
-                <div className="vid mv">
-                  <Frame seed={seed} />
-                  <span className="tag br_ num">{tc}</span>
-                </div>
-                <div className="mb">
-                  <span className="met-n num">{big}</span>
-                  <p className="bxs">{body}</p>
-                  <p className="m">{label}</p>
-                </div>
+            {OUTCOMES.map(([title, body]) => (
+              <div className="card" key={title}>
+                <h3 className="dsp d4">{title}</h3>
+                <p className="bxs">{body}</p>
               </div>
             ))}
           </div>
           <p className="m rv">
-            Figures illustrate typical engagements. Client-attributed case studies
-            published as they clear approval.
+            Qualitative outcomes shown while client-verified results clear approval.
           </p>
         </div>
       </section>
@@ -193,9 +202,17 @@ export default function Home() {
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
           <div className="head rv">
             <p className="m m-a">Formats</p>
-            <h2 className="dsp d2">Every format your<br />curriculum needs.</h2>
+            <h2 className="dsp d2">The right creative format for every learning objective.</h2>
+            <p className="lede">
+              Not every training module needs to look like a film. It needs the right
+              combination of story, demonstration, visual explanation and instruction to
+              make the subject easy to understand and difficult to ignore.
+            </p>
           </div>
           <FormatTabs />
+          <div className="brow rv">
+            <Link href="/services" className="btn btn-g">Explore all formats</Link>
+          </div>
         </div>
       </section>
 
@@ -203,15 +220,15 @@ export default function Home() {
         <div className="wrap stack g34">
           <div className="head rv">
             <p className="m m-a">Use cases</p>
-            <h2 className="dsp d2">Built for every<br />training programme you run.</h2>
+            <h2 className="dsp d2">Make every kind of training worth watching.</h2>
             <p className="lede">
-              From day-one induction and mandatory compliance to plant-floor procedure and
-              product enablement — we produce the modules that carry the most weight and
-              attract the least budget.
+              From an employee&apos;s first day to mandatory annual compliance, Probbit
+              transforms the content organisations need people to understand but often
+              struggle to make engaging.
             </p>
           </div>
           <div className="grid-x c3 rv">
-            {USE_CASES.map(([seed, title, body, tc]) => (
+            {USE_CASES.map(([seed, title, body, outcome, tc]) => (
               <div className="uc" key={title}>
                 <div className="vid uv">
                   <Frame seed={seed} />
@@ -220,10 +237,14 @@ export default function Home() {
                 <div className="ub">
                   <h3 className="dsp d4">{withAmp(title)}</h3>
                   <p className="bxs">{body}</p>
+                  <p className="m">Outcome · {outcome}</p>
                   <Link href="/services" className="tl">Explore →</Link>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="brow rv">
+            <Link href="/services" className="btn btn-g">Find your training use case</Link>
           </div>
         </div>
       </section>
@@ -235,7 +256,7 @@ export default function Home() {
               Trusted by teams at Swiggy, Meesho <Amp /> CARS24
             </span>
             <h2 className="dsp d2">
-              Why L<Amp />D teams<br />choose Zyra.
+              Why L<Amp />D teams choose Probbit.
             </h2>
           </div>
           <StoryCarousel />
@@ -250,13 +271,13 @@ export default function Home() {
         <div className="wrap stack g34">
           <div className="head rv ctr">
             <p className="m m-a">The difference</p>
-            <h2 className="dsp d2 oneline">
-              From quarter-long cycles to mid-flight updates.
+            <h2 className="dsp d2">
+              Your training shouldn&apos;t look like it was created in the &apos;90s.
             </h2>
           </div>
           <div className="ba rv">
             <div className="ba-col">
-              <div className="ba-h"><p className="m">Traditional production</p></div>
+              <div className="ba-h"><p className="m">Traditional training content</p></div>
               {BEFORE.map((b) => (
                 <div className="ba-r" key={b}>
                   <span className="ic ic-x">✕</span>
@@ -265,7 +286,7 @@ export default function Home() {
               ))}
             </div>
             <div className="ba-col good">
-              <div className="ba-h"><p className="m m-a">With Zyra L<Amp />D</p></div>
+              <div className="ba-h"><p className="m m-a">With Probbit</p></div>
               {AFTER.map((a) => (
                 <div className="ba-r" key={a}>
                   <span className="ic ic-c">✓</span>
@@ -281,14 +302,14 @@ export default function Home() {
         <div className="wrap stack g24">
           <div className="head rv">
             <p className="m m-a">How we compare</p>
-            <h2 className="dsp d2">Against the other ways<br />this gets made.</h2>
+            <h2 className="dsp d2">Against the other ways this gets made.</h2>
           </div>
           <div className="cmp-w rv">
             <table className="cmp">
               <thead>
                 <tr>
                   <th>&nbsp;</th>
-                  <th>Zyra L<Amp />D</th>
+                  <th>Probbit L<Amp />D</th>
                   <th>Production agency</th>
                   <th>Off-the-shelf library</th>
                   <th>In-house / freelance</th>
@@ -335,7 +356,7 @@ export default function Home() {
         <div className="wrap grid-x c2 rv" style={{ gap: "clamp(20px,3.4vw,52px)", alignItems: "start" }}>
           <div className="stack g18">
             <p className="m m-a">Delivery</p>
-            <h2 className="dsp d2">We don&apos;t hand you<br />a folder of MP4s.</h2>
+            <h2 className="dsp d2">We don&apos;t hand you a folder of MP4s.</h2>
             <p className="lede">
               Most production vendors stop at the export and leave deployment, tracking and
               conformance to your LMS admin. Every line here ships inside the build — never
@@ -360,7 +381,7 @@ export default function Home() {
         <div className="wrap stack g34">
           <div className="head rv">
             <p className="m m-a">How it works</p>
-            <h2 className="dsp d2">Five stages, and you<br />only appear in two.</h2>
+            <h2 className="dsp d2">Five stages, and you only appear in two.</h2>
           </div>
           <div className="grid-x c5 rv">
             {STEPS.map(([n, title, body]) => (
@@ -397,7 +418,7 @@ export default function Home() {
         <div className="wrap grid-x c2 rv" style={{ gap: "clamp(20px,3.4vw,52px)", alignItems: "start" }}>
           <div className="stack g14">
             <p className="m m-a">Updated quarterly · July 2026</p>
-            <h2 className="dsp d2">What we&apos;ll tell you<br />to shoot instead.</h2>
+            <h2 className="dsp d2">What we&apos;ll tell you to shoot instead.</h2>
             <p className="lede">
               Four things AI production still doesn&apos;t do well. We&apos;d rather lose
               the module than deliver one of these badly.
@@ -421,7 +442,7 @@ export default function Home() {
         <div className="wrap faq rv">
           <div className="stack g18">
             <p className="m m-a">FAQ</p>
-            <h2 className="dsp d2">Questions we get<br />asked a lot.</h2>
+            <h2 className="dsp d2">Questions we get asked a lot.</h2>
             <div className="brow">
               <Link href="/contact" className="btn btn-a">Book a consultation</Link>
             </div>
@@ -449,7 +470,7 @@ export default function Home() {
       </section>
 
       <CtaBox
-        title={<>Send us one module<br />you&apos;re dreading.</>}
+        title="Send us one module you're dreading."
         body="The one that's out of date, too boring to finish, or quoted at a number you can't defend. We'll come back with how we'd make it and what it would take."
       />
     </main>

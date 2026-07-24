@@ -77,7 +77,7 @@ export default function Pricing() {
         <div className="wrap grid-x c2 rv" style={{ gap: "clamp(20px,3.4vw,52px)", alignItems: "start" }}>
           <div className="stack g14">
             <p className="m m-a">What moves the number</p>
-            <h2 className="dsp d2">Five things, and<br />you control four.</h2>
+            <h2 className="dsp d2">Five things, and you control four.</h2>
             <p className="lede">
               Most vendors won&apos;t tell you this, which is why quotes arrive as a single
               unexplained figure. These are the levers we&apos;ll walk through on the call.
@@ -101,7 +101,7 @@ export default function Pricing() {
         <div className="wrap stack g24">
           <div className="head rv">
             <p className="m m-a">Add-ons</p>
-            <h2 className="dsp d2">Priced separately,<br />because not everyone needs them.</h2>
+            <h2 className="dsp d2">Priced separately, because not everyone needs them.</h2>
           </div>
           <div className="stack g14 rv">
             {ADDONS.map(([title, body, tag]) => (
@@ -121,7 +121,7 @@ export default function Pricing() {
         <div className="wrap grid-x c2 rv" style={{ gap: "clamp(20px,3.4vw,52px)", alignItems: "center" }}>
           <div className="stack g14">
             <p className="m m-a">The honest comparison</p>
-            <h2 className="dsp d2">What you&apos;re<br />comparing us against.</h2>
+            <h2 className="dsp d2">What you&apos;re comparing us against.</h2>
             <p className="lede">
               Industry figures, not ours — so you can sanity-check any quote you receive,
               including ours.
@@ -142,7 +142,7 @@ export default function Pricing() {
         <div className="wrap faq rv">
           <div className="stack g18">
             <p className="m m-a">Pricing FAQ</p>
-            <h2 className="dsp d2">Before you<br />ask us to quote.</h2>
+            <h2 className="dsp d2">Before you ask us to quote.</h2>
             <div className="brow">
               <Link href="/contact" className="btn btn-a">Book a consultation</Link>
             </div>

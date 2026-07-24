@@ -9,10 +9,10 @@ export default function Footer() {
           <div className="stack g10">
             <span className="logo">
               <Image
-                src="/zyra-logo-dark.png"
-                alt="Zyra"
-                width={1520}
-                height={760}
+                src="/probbit-logo.png"
+                alt="Probbit"
+                width={900}
+                height={241}
                 className="logo-mark"
               />
               <span className="logo-div" aria-hidden="true" />
@@ -54,7 +54,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid var(--line)", paddingTop: 18 }}
         >
           Moving frames are generated placeholders standing in for real
-          delivered work · © {new Date().getFullYear()} Zyra
+          delivered work · © {new Date().getFullYear()} Probbit
         </p>
       </div>
     </footer>

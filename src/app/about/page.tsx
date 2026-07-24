@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   title: "About Us",
   description:
-    "Zyra L&D is the training arm of Zyra, an AI-native content studio producing brand films, commercials and micro drama at broadcast standard.",
+    "Probbit L&D is the training arm of Probbit, an AI-native content studio producing brand films, commercials and micro drama at broadcast standard.",
 };
 
 const STORY: [string, string, string][] = [
   ["2023", "The bet", "“We saw the entire world of production changing in real time. The only question was whether you were going to watch it happen, or build what comes next.”"],
   ["2024", "Going deep", "Months inside every tool, every model, every workflow. Pro bono work taken on to build at real scale and real speed. Several instructive failures."],
   ["2025", "At delivery scale", "Brand films, micro drama, performance creative and always-on social shipped for Adani, NDTV, Swiggy, Meesho and others. Over 5,000 AI creatives delivered."],
-  ["2026", "Zyra L&D", "Marketing clients kept asking whether we could make their induction and compliance content too. It turned out to be the most under-served video budget in the building."],
+  ["2026", "Probbit L&D", "Marketing clients kept asking whether we could make their induction and compliance content too. It turned out to be the most under-served video budget in the building."],
 ];
 
 const DIFF: [string, string, string][] = [
@@ -56,9 +56,9 @@ export default function About() {
               A production studio, <span className="grad">pointed at L<Amp />D.</span>
             </h1>
             <p className="lede">
-              Zyra is an AI-native content studio. We make brand films,
+              Probbit is an AI-native content studio. We make brand films,
               commercials and micro drama for clients who pay for delivery, on deadline, at
-              broadcast standard. Zyra L&amp;D is that same floor, aimed at the part of the
+              broadcast standard. Probbit L&amp;D is that same floor, aimed at the part of the
               business with the biggest video appetite and the smallest budget.
             </p>
           </div>
@@ -70,7 +70,7 @@ export default function About() {
         <div className="wrap grid-x c2 rv" style={{ gap: "clamp(20px,3.4vw,52px)", alignItems: "start" }}>
           <div className="stack g14">
             <p className="m m-a">Mission</p>
-            <h2 className="dsp d2">Training video should cost<br />what a slide deck costs.</h2>
+            <h2 className="dsp d2">Training video should cost what a slide deck costs.</h2>
           </div>
           <p className="lede">
             Not in quality — in friction. The reason internal training looks worse than
@@ -106,7 +106,7 @@ export default function About() {
         <div className="wrap stack g34" style={{ position: "relative", zIndex: 2 }}>
           <div className="head rv">
             <p className="m m-a">What makes us different</p>
-            <h2 className="dsp d2">Everyone else in this<br />category buries video.</h2>
+            <h2 className="dsp d2">Everyone else in this category buries video.</h2>
           </div>
           <div className="grid-x c3 rv">
             {DIFF.map(([n, title, body]) => (
@@ -124,7 +124,7 @@ export default function About() {
         <div className="wrap stack g34">
           <div className="head rv">
             <p className="m m-a">Values</p>
-            <h2 className="dsp d2">Four things we<br />argue about internally.</h2>
+            <h2 className="dsp d2">Four things we argue about internally.</h2>
           </div>
           <div className="grid-x c4 rv">
             {VALUES.map(([title, body]) => (
@@ -141,7 +141,7 @@ export default function About() {
         <div className="wrap grid-x c2 rv" style={{ gap: "clamp(20px,3.4vw,52px)", alignItems: "start" }}>
           <div className="stack g14">
             <p className="m m-a">Updated quarterly · July 2026</p>
-            <h2 className="dsp d2">What we&apos;ll tell you<br />to shoot instead.</h2>
+            <h2 className="dsp d2">What we&apos;ll tell you to shoot instead.</h2>
             <p className="lede">
               Four things AI production still doesn&apos;t do well. We&apos;d rather lose
               the module than deliver one of these badly.
@@ -162,7 +162,7 @@ export default function About() {
         <div className="wrap stack g34">
           <div className="head rv">
             <p className="m m-a">Trust indicators</p>
-            <h2 className="dsp d2">Who we work with, and<br />what we hold ourselves to.</h2>
+            <h2 className="dsp d2">Who we work with, and what we hold ourselves to.</h2>
           </div>
           <div className="grid-x c4 rv">
             {TRUST.map(([k, v]) => (
@@ -184,7 +184,7 @@ export default function About() {
       </section>
 
       <CtaBox
-        title={<>Come and see how<br />it&apos;s actually made.</>}
+        title="Come and see how it's actually made."
         body="Send us a module you're dreading — the stale one, the boring one, or the one quoted at a number you can't defend. We'll show you how we'd make it."
       />
     </main>

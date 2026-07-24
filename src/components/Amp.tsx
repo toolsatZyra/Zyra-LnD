@@ -10,7 +10,7 @@
  * optical sizing so it still sits correctly inside heavy condensed display
  * type.
  *
- *   Why L<Amp />D teams choose Zyra.
+ *   Why L<Amp />D teams choose Probbit.
  */
 import { Fragment } from "react";
 
