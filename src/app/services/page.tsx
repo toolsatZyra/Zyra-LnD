@@ -1,21 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Reel from "@/components/Reel";
-import Frame from "@/components/Frame";
 import CtaBox from "@/components/CtaBox";
-import Amp, { withAmp } from "@/components/Amp";
+import { withAmp } from "@/components/Amp";
+import { BOOKING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
   title: "Services",
   description:
-    "Onboarding, compliance, safety, product training, enablement, microlearning, animation, localisation, LMS packaging and library refresh — every engagement delivered LMS-ready.",
+    "Onboarding, compliance, safety, product, sales enablement, microlearning, animation, localisation, LMS packaging and library refresh — training content built to be watched, remembered and applied.",
 };
 
 type Service = {
   n: string;
-  seed: number;
-  tc: string;
   title: string;
   body: string;
   ideal: string;
@@ -24,74 +21,74 @@ type Service = {
 
 const SERVICES: Service[] = [
   {
-    n: "01", seed: 31, tc: "00:02:14",
-    title: "Onboarding & induction films",
-    body: "A hero welcome film plus the short-module series behind it — policies, systems, org structure, first-week orientation. Usually the most-watched content an organisation owns, and usually the most neglected.",
-    ideal: "HR and People teams hiring at pace, or anyone whose induction is still a deck and a PDF.",
-    outcome: "New hires productive sooner, and a consistent first week regardless of which manager they land under.",
+    n: "01",
+    title: "Employee onboarding & induction videos",
+    body: "Turn company presentations, policy documents, systems training and first-week information into a clear, engaging onboarding journey.",
+    ideal: "HR, People and L&D teams hiring across roles, locations or business units.",
+    outcome: "More consistent onboarding and faster employee readiness.",
   },
   {
-    n: "02", seed: 32, tc: "00:11:38",
-    title: "Compliance & policy modules",
-    body: "POSH, code of conduct, anti-bribery, data privacy, cyber awareness. Scenario-led rather than narrated slides, with knowledge checks and completion records that stand up to audit.",
-    ideal: "Legal, Risk and Compliance functions carrying a mandatory annual completion target.",
-    outcome: "Completion rates that reflect actual attention, and an audit trail that holds.",
+    n: "02",
+    title: "Compliance & policy training videos",
+    body: "Transform mandatory subjects into realistic scenarios where employees see the decision, risk and correct response in context.",
+    ideal: "Compliance, Legal, Risk, HR and Information Security teams.",
+    outcome: "Better policy awareness, learner attention and audit-ready completion.",
   },
   {
-    n: "03", seed: 33, tc: "00:04:52",
-    title: "Safety, EHS & SOP video",
-    body: "Task-specific procedure video built around your equipment, your floor and your actual sequence of operations. The one category where a generic library is worse than nothing.",
-    ideal: "Manufacturing, energy, logistics and field-services operations with real physical risk.",
-    outcome: "Procedures taught the way they're performed, and training that survives an inspection.",
+    n: "03",
+    title: "Safety, EHS & SOP videos",
+    body: "Show the environment, procedure, risk and correct sequence rather than expecting employees to understand everything from text.",
+    ideal: "Manufacturing, logistics, infrastructure, energy and field operations.",
+    outcome: "Clearer process understanding and more consistent procedure training.",
   },
   {
-    n: "04", seed: 34, tc: "00:06:07",
+    n: "04",
     title: "Product & systems training",
-    body: "Feature explainers, software walkthroughs and screencasts for internal staff, channel partners or dealers. Built to be updated, because products change faster than curricula do.",
-    ideal: "Product marketing, sales ops and channel teams supporting a shifting product line.",
-    outcome: "Fewer support escalations, and training that stays accurate past the next release.",
+    body: "Create visual product explainers, software walkthroughs, feature demonstrations and internal systems training.",
+    ideal: "Product, Customer Success, Operations, Sales and Channel teams.",
+    outcome: "Faster product understanding and fewer repetitive support requirements.",
   },
   {
-    n: "05", seed: 35, tc: "00:05:19",
+    n: "05",
     title: "Sales & channel enablement",
-    body: "Pitch training, objection handling and dramatised customer conversations — the right way and the wrong way, filmed as a pair so the contrast does the teaching.",
-    ideal: "Revenue enablement teams onboarding reps or rolling out new positioning.",
-    outcome: "Faster ramp for new reps and a consistent pitch across a distributed floor.",
+    body: "Build scenario-led training around pitches, customer conversations, objection handling, negotiation and product positioning.",
+    ideal: "Sales enablement, revenue operations and channel teams.",
+    outcome: "Faster representative ramp-up and more consistent customer communication.",
   },
   {
-    n: "06", seed: 36, tc: "00:03:26",
-    title: "Microlearning series",
-    body: "Two-to-seven minute single-objective modules, cut vertical for mobile and Teams. Produced as a series off one content spine so unit economics hold at library scale.",
-    ideal: "Deskless, field and shop-floor workforces who will never sit through a 30-minute module.",
-    outcome: "Completion rates that hold, and training that reaches people without a desk.",
+    n: "06",
+    title: "Microlearning video series",
+    body: "Break complex programmes into focused, mobile-friendly episodes built around one learning objective at a time.",
+    ideal: "Distributed, deskless, frontline and field workforces.",
+    outcome: "Easier consumption and more continuous learning.",
   },
   {
-    n: "07", seed: 37, tc: "00:02:48",
+    n: "07",
     title: "Animated explainers & motion graphics",
-    body: "For processes, data flows, org changes and anything with no filmable subject. 2D motion, character animation, and 3D where machinery or an invisible process needs to be seen.",
-    ideal: "Abstract or systems-level content — compliance frameworks, workflows, restructures.",
-    outcome: "Complex material understood in one pass instead of three readings of a policy document.",
+    body: "Use animation to explain systems, workflows, frameworks, machinery and subjects that cannot be communicated clearly through conventional footage.",
+    ideal: "Process, product, policy and technical training.",
+    outcome: "Complex information made easier to understand.",
   },
   {
-    n: "08", seed: 38, tc: "00:07:11",
-    title: "Localisation & versioning",
-    body: "Native lip-sync per language with on-screen typography rebuilt rather than subtitled over. Regional versions for different plants, entities or regulatory regimes from one master.",
-    ideal: "Multi-state Indian operations and global organisations with a distributed workforce.",
-    outcome: "Everyone trained in the language they think in, without a separate shoot per market.",
+    n: "08",
+    title: "Multilingual localisation & versioning",
+    body: "Create voice, caption, on-screen-text and regional versions from one approved production master.",
+    ideal: "Multi-state Indian businesses, GCCs and global enterprises.",
+    outcome: "Consistent training across markets without separate productions.",
   },
   {
-    n: "09", seed: 39, tc: "00:01:52",
+    n: "09",
     title: "LMS packaging & accessibility",
-    body: "SCORM 1.2, SCORM 2004, xAPI or cmi5; captions and transcripts; WCAG 2.1 AA including the audio-description track most vendors quietly skip. Tested in your LMS before handover.",
-    ideal: "Anyone who has received a folder of MP4s from a vendor and had to finish the job themselves.",
-    outcome: "Trackable, auditable, accessible training — deployable the day it lands.",
+    body: "Receive deployment-ready content with agreed tracking, captions, transcripts and accessibility support.",
+    ideal: "Teams that need finished learning assets rather than raw video files.",
+    outcome: "Faster deployment and fewer handovers between vendors.",
   },
   {
-    n: "10", seed: 40, tc: "00:09:02",
-    title: "Library refresh retainer",
-    body: "We hold your project files and re-cut affected sections when a policy, product, system or brand changes. Priced annually against build cost rather than as a fresh project each time.",
-    ideal: "Organisations with a module library already going stale, whoever originally built it.",
-    outcome: "A curriculum that stays current, at a fraction of what re-commissioning it would cost.",
+    n: "10",
+    title: "Training-library refresh",
+    body: "Update individual scenes, processes, screenshots, policies, branding and language versions without recommissioning the complete production.",
+    ideal: "Organisations with large training libraries that become outdated quickly.",
+    outcome: "A learning library that stays current at a manageable cost.",
   },
 ];
 
@@ -101,21 +98,20 @@ export default function Services() {
       <section className="hero">
         <div className="glow" style={{ width: 400, height: 400, background: "var(--acc)", right: -100, top: -150, opacity: 0.15 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
-          <div className="hero-copy stack g18">
-            <h1 className="dsp d1 oneline">
-              What we make <span className="grad">for L<Amp />D teams.</span>
+          <div className="hero-copy stack g18 ctr">
+            <h1 className="dsp d1">
+              Training content built to be <span className="grad">watched, remembered and applied.</span>
             </h1>
-            <p className="lede">
-              Every engagement ships LMS-ready — SCORM-packaged, captioned,
-              WCAG-conformant and version-controlled. Scope is set on the call, and the
-              curriculum audit that informs it costs nothing.
+            <p className="lede" style={{ maxWidth: "72ch", marginLeft: "auto", marginRight: "auto" }}>
+              Probbit transforms presentations, policies, processes and subject-matter
+              expertise into engaging learning experiences. Every project combines learning
+              structure, storytelling, AI-first production and human creative direction.
             </p>
-            <div className="brow">
-              <Link href="/contact" className="btn btn-a">Book a consultation</Link>
-              <Link href="/about" className="btn btn-g">Who we are</Link>
+            <div className="brow" style={{ justifyContent: "center" }}>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn-a">Transform a module</a>
+              <Link href="/about" className="btn btn-g">See who we help</Link>
             </div>
           </div>
-          <Reel seed={30} label="Selected work — now playing" showShot={false} />
         </div>
       </section>
 
@@ -126,7 +122,7 @@ export default function Services() {
               <p className="ni">{s.n}</p>
               <div className="stack g10">
                 <h2 className="dsp d3">{withAmp(s.title)}</h2>
-                <p className="bs" style={{ maxWidth: "58ch" }}>{s.body}</p>
+                <p className="bs" style={{ maxWidth: "64ch" }}>{s.body}</p>
                 <div className="svc-m">
                   <div>
                     <p className="m">Ideal for</p>
@@ -138,18 +134,14 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <div className="vid svc-v">
-                <Frame seed={s.seed} />
-                <span className="tag br_ num">{s.tc}</span>
-              </div>
             </div>
           ))}
         </div>
       </section>
 
       <CtaBox
-        title={<>Not sure which of these<br />you actually need?</>}
-        body="Most teams aren't. We'll audit the curriculum you have, tell you what can be re-versioned instead of rebuilt, and you keep the findings either way."
+        title={<>Not sure which format<br />your training needs?</>}
+        body="Send us your existing curriculum or one priority module. We'll identify what can be shortened, updated, repurposed or rebuilt — and recommend the best production format."
       />
     </main>
   );

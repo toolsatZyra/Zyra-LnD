@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import { BOOKING_URL } from "@/lib/site";
 
 const TIERS = [
   {
@@ -34,9 +34,9 @@ const TIERS = [
       "Free curriculum audit before scoping",
       "Shared visual system across modules",
       "Up to three languages included",
-      "SCORM, xAPI or cmi5 packaging",
-      "WCAG 2.1 AA with audio description",
-      "Tested in your LMS before handover",
+      "SCORM, xAPI or cmi5 packaging (on request)",
+      "WCAG 2.1 AA with audio description (on request)",
+      "Tested in your LMS before handover (on request)",
     ],
     off: [],
   },
@@ -112,13 +112,15 @@ export default function PricingTiers() {
               </p>
               <p className="p-note">{t.note}</p>
             </div>
-            <Link
-              href="/contact"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`btn ${t.featured ? "btn-a" : "btn-g"}`}
               style={{ justifyContent: "center" }}
             >
               {t.cta}
-            </Link>
+            </a>
             <div className="p-div" />
             <ul className="p-list">
               {t.features.map((f) => (

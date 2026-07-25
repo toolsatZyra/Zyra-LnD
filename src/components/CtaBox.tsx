@@ -1,4 +1,4 @@
-import ContactForm from "./ContactForm";
+import { BOOKING_URL } from "@/lib/site";
 
 export default function CtaBox({
   title,
@@ -40,7 +40,19 @@ export default function CtaBox({
               <p className="lede">{body}</p>
             </div>
             <div className="stack g14">
-              {showForm ? <ContactForm /> : children}
+              {showForm ? (
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-a"
+                  style={{ alignSelf: "flex-start" }}
+                >
+                  Book a consultation
+                </a>
+              ) : (
+                children
+              )}
               <p className="m">Delivering to teams worldwide</p>
             </div>
           </div>

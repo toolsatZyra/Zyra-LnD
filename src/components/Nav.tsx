@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { BOOKING_URL } from "@/lib/site";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -48,9 +49,9 @@ export default function Nav() {
         </div>
 
         <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          <Link href="/contact" className="btn btn-a">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn-a">
             Book a consultation
-          </Link>
+          </a>
           <button
             className="burger"
             aria-expanded={open}

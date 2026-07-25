@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import PricingTiers from "@/components/PricingTiers";
 import CtaBox from "@/components/CtaBox";
+import { BOOKING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/pricing" },
@@ -144,7 +144,7 @@ export default function Pricing() {
             <p className="m m-a">Pricing FAQ</p>
             <h2 className="dsp d2">Before you ask us to quote.</h2>
             <div className="brow">
-              <Link href="/contact" className="btn btn-a">Book a consultation</Link>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn-a">Book a consultation</a>
             </div>
           </div>
           <div>

@@ -42,8 +42,8 @@ export default function Footer() {
 
           <div>
             <h5>Delivery</h5>
-            <Link href="/services">SCORM &amp; xAPI</Link>
-            <Link href="/services">Captions</Link>
+            <Link href="/services">Captions &amp; transcripts</Link>
+            <Link href="/services">Accessibility</Link>
             <Link href="/services">Localisation</Link>
             <Link href="/pricing">Refresh retainer</Link>
           </div>
@@ -54,7 +54,8 @@ export default function Footer() {
           style={{ borderTop: "1px solid var(--line)", paddingTop: 18 }}
         >
           Moving frames are generated placeholders standing in for real
-          delivered work · © {new Date().getFullYear()} Probbit
+          delivered work · © {new Date().getFullYear()} Probbit · IZZYAI Labs
+          Private Limited. All rights reserved.
         </p>
       </div>
     </footer>

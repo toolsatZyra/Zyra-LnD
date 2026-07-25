@@ -359,7 +359,7 @@ p { margin: 0; }
 .st-nav.prev { left: -10px; } .st-nav.next { right: -10px; }
 
 /* ── services rows ── */
-.svc { display: grid; grid-template-columns: 40px 1fr 220px; gap: clamp(12px, 2.4vw, 34px); padding: clamp(20px, 2.6vw, 32px) 0; border-top: 1px solid var(--line); align-items: start; }
+.svc { display: grid; grid-template-columns: 40px 1fr; gap: clamp(12px, 2.4vw, 34px); padding: clamp(20px, 2.6vw, 32px) 0; border-top: 1px solid var(--line); align-items: start; }
 .svc-m { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
 .svc-m > div { display: flex; flex-direction: column; gap: 4px; }
 .svc-v { aspect-ratio: 4/3; }

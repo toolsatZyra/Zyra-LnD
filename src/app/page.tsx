@@ -7,6 +7,7 @@ import FormatTabs from "@/components/FormatTabs";
 import StoryCarousel from "@/components/StoryCarousel";
 import CtaBox from "@/components/CtaBox";
 import Amp, { withAmp } from "@/components/Amp";
+import { BOOKING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -63,15 +64,14 @@ const COMPARE: string[][] = [
   ["Your equipment & floor", "Yes", "Yes", "No", "Sometimes"],
   ["Update when policy changes", "Re-cut in days", "Full reshoot", "Wait for the vendor", "Depends who's left"],
   ["Languages", "Re-voiced per language", "Priced per market", "Whatever ships", "Rarely"],
-  ["SCORM / xAPI packaging", "Included", "Usually not offered", "Included", "Your problem"],
-  ["WCAG 2.1 AA + audio description", "Included", "Quoted as an extra", "Varies", "Rarely"],
+  ["SCORM / xAPI packaging", "On request", "Usually not offered", "Included", "Your problem"],
+  ["WCAG 2.1 AA + audio description", "On request", "Quoted as an extra", "Varies", "Rarely"],
   ["Cost at library scale", "Per module", "Per shoot day", "Per seat, forever", "Headcount"],
 ];
 
 const SPEC: [string, string][] = [
-  ["Packaging", "SCORM 1.2 as standard; SCORM 2004, xAPI or cmi5 on request. Manifest validated and completion tracking tested in your LMS before handover."],
-  ["Captions", "Burned-in and sidecar SRT/VTT, with a timestamped transcript for search, reference and compliance records."],
-  ["Accessibility", "WCAG 2.1 AA conformant, including the audio-description track most vendors omit and most buyers don't know Level AA requires."],
+  ["Captions", "Burned-in and sidecar captions, with a timestamped transcript for search, reference and compliance records."],
+  ["Accessibility", "Built so every learner can follow along — legible on-screen text, clear visual hierarchy and an audio-description track available on request."],
   ["Localisation", "Native lip-sync per language with on-screen typography rebuilt, generated from the master build rather than subtitled over the original."],
   ["Deliverables", "16:9 master for the LMS, 9:16 cut-down for mobile and Teams, plus a bandwidth-optimised encode for low-connectivity sites."],
   ["Version control", "Every project file retained. A regulatory change becomes a scene-level re-cut, not a fresh production cycle."],
@@ -95,7 +95,7 @@ const WORK: [number, string, string][] = [
 const LIMITS: [string, string][] = [
   ["Your CEO's actual face", "Culture and values messages carry because a real, named person said them. Film it."],
   ["Hands-on equipment demos", "Where the exact machine, panel and torque matter, you need a camera on the floor."],
-  ["Close-up lip-sync in Indian languages", "Improving fast, still not broadcast-clean in most dialects. We shift to voiceover-over-action."],
+  ["Genuine customer testimonials", "When a claim needs a real customer's face and voice on record, film them — a rendered version won't carry the same weight."],
   ["Branching-scenario design", "We produce the video. The instructional design behind a deep branching sim isn't our craft, and we'll say so."],
 ];
 
@@ -123,19 +123,19 @@ export default function Home() {
         <div className="glow" style={{ width: 420, height: 420, background: "var(--acc)", right: -90, top: -140, opacity: 0.16 }} />
         <div className="glow" style={{ width: 330, height: 330, background: "var(--acc2)", left: -110, bottom: -150, opacity: 0.13 }} />
         <div className="wrap stack g24" style={{ position: "relative", zIndex: 2 }}>
-          <div className="hero-copy stack g18">
+          <div className="hero-copy stack g18 ctr">
             <h1 className="dsp d1 d1-hero oneline">
               Corporate training videos <span className="grad">built to hold attention.</span>
             </h1>
-            <p className="lede">
-              Most training content is technically completed but rarely watched,
-              remembered or applied. Probbit combines storytelling, learning design and
-              AI-first production to transform onboarding, compliance, safety, sales and
-              product training into engaging content built to hold attention and improve
-              learning outcomes.
+            <p className="lede" style={{ maxWidth: "78ch", marginLeft: "auto", marginRight: "auto" }}>
+              Most training content is technically completed but rarely watched, remembered
+              or applied. Probbit combines storytelling, learning design and AI-first
+              production to transform onboarding, compliance, safety, sales and product
+              training into engaging content built to hold attention and improve learning
+              outcomes.
             </p>
-            <div className="brow">
-              <Link href="/contact" className="btn btn-a">Transform a training module</Link>
+            <div className="brow" style={{ justifyContent: "center" }}>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn-a">Transform a training module</a>
               <Link href="/services" className="btn btn-g">Explore our services</Link>
             </div>
           </div>
@@ -363,7 +363,7 @@ export default function Home() {
               quoted as a line-item extra.
             </p>
             <div className="brow">
-              <Link href="/contact" className="btn btn-a">Book a consultation</Link>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn-a">Book a consultation</a>
             </div>
           </div>
           <div className="spec">
@@ -405,7 +405,7 @@ export default function Home() {
             <div className="tile"><span className="tile-n num">5,000+</span><p className="m">Creatives delivered</p></div>
             <div className="tile"><span className="tile-n num">50+</span><p className="m">Films produced</p></div>
             <div className="tile"><span className="tile-n num">~1 day</span><p className="m">Per short module</p></div>
-            <div className="tile"><span className="tile-n num">WCAG</span><p className="m">2.1 AA on delivery</p></div>
+            <div className="tile"><span className="tile-n num">100+</span><p className="m">Customers served</p></div>
             <div className="tile tile-w">
               <span className="tile-n grad num">15–20%</span>
               <p className="bxs">Annual refresh retainer against build cost — the industry standard for maintenance, and why your library stops going stale.</p>
@@ -444,7 +444,7 @@ export default function Home() {
             <p className="m m-a">FAQ</p>
             <h2 className="dsp d2">Questions we get asked a lot.</h2>
             <div className="brow">
-              <Link href="/contact" className="btn btn-a">Book a consultation</Link>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn-a">Book a consultation</a>
             </div>
           </div>
           <div>
